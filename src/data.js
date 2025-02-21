@@ -1,2 +1,0 @@
-user = 'jh'
-password = 'qwerty'
