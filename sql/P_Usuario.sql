@@ -19,7 +19,7 @@ BEGIN
 
     -- Insertar el nuevo usuario
     INSERT INTO t_usuarios (id_usuario, nombres_usuario, apellidos_usuario, usuario, password, id_rol) 
-    VALUES (nuevoID, p_nombres_usuario, p_apellidos_usuario, p_usuario, p_password, p_id_rol);
+    VALUES (nuevoID, p_nombres_usuario, p_apellidos_usuario, p_usuario, p_password, 2);
 END $$
 
 DELIMITER ;
