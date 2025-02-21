@@ -8,8 +8,7 @@ CREATE PROCEDURE p_usuario (
     IN p_nombres_usuario VARCHAR(25),
     IN p_apellidos_usuario VARCHAR(25),
     IN p_usuario VARCHAR(10),
-    IN p_password VARCHAR(25),
-    IN p_id_rol INT
+    IN p_password VARCHAR(25)
 )
 BEGIN
     DECLARE nuevoID INT;

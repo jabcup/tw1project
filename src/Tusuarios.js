@@ -34,13 +34,12 @@ app.get('/usuarios', (req, res) => {
 app.post('/usuarios', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
-    let sql = 'CALL p_usuario(?, ?, ?, ?, ?)';
+    let sql = 'CALL p_usuario(?, ?, ?, ?)';
     let valores = [
         req.body.nombres_usuario,
         req.body.apellidos_usuario,
         req.body.usuario,
         req.body.password,
-        req.body.id_rol
     ];
 
     conexion.query(sql, valores, (err, resultado) => {
