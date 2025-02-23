@@ -1,7 +1,7 @@
-const data = require('./data');
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); // Importar el archivo de configuración
+const dbConfig = require('./data'); // Importar configuración desde data.js
+
 const app = express();
 app.use(express.json());
 const puerto = 2000;
