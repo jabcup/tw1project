@@ -1,15 +1,16 @@
 const express = require('express');
 const mysql = require('mysql2');
+const config = require('./data'); // Importar el archivo de configuración
 const app = express();
 
 app.use(express.json());
 const puerto = 2000;
 
-// Configuración de la conexión a MySQL
+// Configuración de la conexión a MySQL usando las credenciales de data.js
 const conexion = mysql.createPool({
     host: 'localhost',
-    user: 'root',
-    password: '7090',
+    user: config.username, // Usar el usuario desde data.js
+    password: config.password, // Usar la contraseña desde data.js
     database: 'tw1project'
 });
 
