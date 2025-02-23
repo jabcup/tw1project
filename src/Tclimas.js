@@ -1,3 +1,4 @@
+const data = require('./data');
 const express = require('express');
 const mysql = require('mysql2');
 const dbConfig = require('./data'); // Importar el archivo de configuración
