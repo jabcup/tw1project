@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); // Importar configuración desde data.js
-
+const dbConfig = require('./data'); 
+const router = express.Router()
 const app = express();
-app.use(express.json());
+router.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Ruta de roles');
 });
 
 // Obtener todos los roles
-app.get('/roles', (req, res) => {
+router.get('/', (req, res) => {
     let sql = "SELECT * FROM t_roles;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ app.get('/roles', (req, res) => {
 });
 
 // Insertar un nuevo rol utilizando el procedimiento almacenado
-app.post('/roles', (req, res) => {
+router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL prol(?)';
@@ -43,7 +43,7 @@ app.post('/roles', (req, res) => {
 });
 
 // Editar un rol
-app.put('/roles/:id', (req, res) => { 
+router.put('/:id', (req, res) => { 
     let id = req.params.id; 
     let nombre = req.body.nombre;
 
@@ -59,7 +59,7 @@ app.put('/roles/:id', (req, res) => {
 }); 
 
 // Eliminar un rol
-app.delete('/roles/:id', (req, res) => { 
+router.delete('/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_roles WHERE id_rol = ?'; 
 
@@ -75,7 +75,4 @@ app.delete('/roles/:id', (req, res) => {
     }); 
 });
 
-// Servidor
-app.listen(puerto, () => {
-    console.log('Servidor OK en puerto: ' + puerto);
-});
+module.exports = router

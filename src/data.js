@@ -1,7 +1,7 @@
 // data.js
 module.exports = {
     host: 'localhost',
-    user: 'root',
-    password: '7090',
+    user: 'jh',
+    password: 'qwerty',
     database: 'tw1project'
 };

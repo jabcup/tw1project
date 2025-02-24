@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); // Importar configuración desde data.js
-
+const dbConfig = require('./data'); 
+const router = express.Router()
 const app = express();
-app.use(express.json());
+router.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Ruta de noticias');
 });
 
 // Obtener todas las noticias
-app.get('/noticias', (req, res) => {
+router.get('/', (req, res) => {
     let sql = "SELECT * FROM t_noticias;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ app.get('/noticias', (req, res) => {
 });
 
 // Insertar una nueva noticia utilizando el procedimiento almacenado
-app.post('/noticias', (req, res) => {
+router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pnoticia(?, ?, ?, ?, ?)';
@@ -49,7 +49,7 @@ app.post('/noticias', (req, res) => {
 });
 
 // Editar una noticia
-app.put('/noticias/:id', (req, res) => { 
+router.put('/:id', (req, res) => { 
     let id = req.params.id; 
     let { id_fuente, id_tema, fecha, titulo, descripcion_noticia } = req.body;
 
@@ -65,7 +65,7 @@ app.put('/noticias/:id', (req, res) => {
 }); 
 
 // Eliminar una noticia
-app.delete('/noticias/:id', (req, res) => { 
+router.delete('/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_noticias WHERE id_noticia = ?'; 
 
@@ -81,7 +81,4 @@ app.delete('/noticias/:id', (req, res) => {
     }); 
 });
 
-// Servidor
-app.listen(puerto, () => {
-    console.log('Servidor OK en puerto: ' + puerto);
-});
+module.exports = router

@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); // Importar configuración desde data.js
-
+const dbConfig = require('./data'); 
+const router = express.Router()
 const app = express();
-app.use(express.json());
+router.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Ruta de datos de monedas');
 });
 
 // Obtener todos los datos de monedas
-app.get('/datos_monedas', (req, res) => {
+router.get('/', (req, res) => {
     let sql = "SELECT * FROM t_datos_monedas;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ app.get('/datos_monedas', (req, res) => {
 });
 
 // Insertar un nuevo dato de moneda utilizando el procedimiento almacenado
-app.post('/datos_monedas', (req, res) => {
+router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pDatosMonedas(?, ?, ?, ?)';
@@ -48,7 +48,7 @@ app.post('/datos_monedas', (req, res) => {
 });
 
 // Editar un dato de moneda
-app.put('/datos_monedas/:id', (req, res) => { 
+router.put('/:id', (req, res) => { 
     let id = req.params.id; 
     let { id_fuente, id_moneda, fecha, valor_respecto_dolar } = req.body;
 
@@ -64,7 +64,7 @@ app.put('/datos_monedas/:id', (req, res) => {
 }); 
 
 // Eliminar un dato de moneda
-app.delete('/datos_monedas/:id', (req, res) => { 
+router.delete('/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_datos_monedas WHERE id_dato = ?'; 
 
@@ -80,7 +80,4 @@ app.delete('/datos_monedas/:id', (req, res) => {
     }); 
 });
 
-// Servidor
-app.listen(puerto, () => {
-    console.log('Servidor OK en puerto: ' + puerto);
-});
+module.exports = router
