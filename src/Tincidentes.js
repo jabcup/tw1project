@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); 
-const router = express.Router()
+const dbConfig = require('./data'); // Importar configuración desde data.js
+
 const app = express();
-router.use(express.json());
+app.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Ruta de incidentes');
 });
 
 // Obtener todos los incidentes
-router.get('/', (req, res) => {
+app.get('/incidentes', (req, res) => {
     let sql = "SELECT * FROM t_incidentes;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 });
 
 // Insertar un nuevo incidente utilizando el procedimiento almacenado
-router.post('/', (req, res) => {
+app.post('/incidentes', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pincidente(?, ?, ?, ?, ?, ?, ?)';
@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
 });
 
 // Editar un incidente
-router.put('/:id', (req, res) => { 
+app.put('/incidentes/:id', (req, res) => { 
     let id = req.params.id; 
     let { lugar, tipo, descripcion_incidente, fecha, hora, id_fuente, url } = req.body;
 
@@ -67,7 +67,7 @@ router.put('/:id', (req, res) => {
 }); 
 
 // Eliminar un incidente
-router.delete('/:id', (req, res) => { 
+app.delete('/incidentes/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_incidentes WHERE id_incidente = ?'; 
 
@@ -83,4 +83,7 @@ router.delete('/:id', (req, res) => {
     }); 
 });
 
-module.exports = router
+// Servidor
+app.listen(puerto, () => {
+    console.log('Servidor OK en puerto: ' + puerto);
+});

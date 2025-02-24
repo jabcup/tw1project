@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); 
-const router = express.Router()
+const dbConfig = require('./data'); // Importar configuración desde data.js
+
 const app = express();
-router.use(express.json());
+app.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Ruta de relación entre usuarios y temas');
 });
 
 // Obtener todas las relaciones entre usuarios y temas
-router.get('/', (req, res) => {
+app.get('/taux_temas', (req, res) => {
     let sql = "SELECT * FROM taux_temas;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 });
 
 // Insertar una nueva relación entre usuario y tema utilizando el procedimiento almacenado
-router.post('/', (req, res) => {
+app.post('/taux_temas', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pt_taux_temas(?, ?)';
@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
 });
 
 // Eliminar una relación entre usuario y tema
-router.delete('/', (req, res) => { 
+app.delete('/taux_temas', (req, res) => { 
     const { id_usuario, id_tema } = req.body; 
     let sql = 'DELETE FROM taux_temas WHERE id_usuario = ? AND id_tema = ?'; 
 
@@ -60,4 +60,7 @@ router.delete('/', (req, res) => {
     }); 
 }); 
 
-module.exports = router
+// Servidor
+app.listen(puerto, () => {
+    console.log('Servidor OK en puerto: ' + puerto);
+});

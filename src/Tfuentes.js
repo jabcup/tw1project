@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); 
-const router = express.Router()
+const dbConfig = require('./data'); // Importar configuración desde data.js
+
 const app = express();
-router.use(express.json());
+app.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Ruta de fuentes');
 });
 
 // Obtener todas las fuentes
-router.get('/', (req, res) => {
+app.get('/fuentes', (req, res) => {
     let sql = "SELECT * FROM t_fuentes;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 });
 
 // Insertar una nueva fuente utilizando el procedimiento almacenado
-router.post('/', (req, res) => {
+app.post('/fuentes', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pfuente(?, ?, ?, ?)';
@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
 });
 
 // Editar una fuente
-router.put('/:id', (req, res) => { 
+app.put('/fuentes/:id', (req, res) => { 
     let id = req.params.id; 
     let { nombre_fuente, descripcion_fuente, ulr, dato_provisto } = req.body;
 
@@ -64,7 +64,7 @@ router.put('/:id', (req, res) => {
 }); 
 
 // Eliminar una fuente
-router.delete('/:id', (req, res) => { 
+app.delete('/fuentes/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_fuentes WHERE id_fuente = ?'; 
 
@@ -80,4 +80,7 @@ router.delete('/:id', (req, res) => {
     }); 
 });
 
-module.exports = router
+// Servidor
+app.listen(puerto, () => {
+    console.log('Servidor OK en puerto: ' + puerto);
+});

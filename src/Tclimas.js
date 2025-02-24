@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); 
-const router = express.Router()
+const dbConfig = require('./data'); // Importar configuración desde data.js
+
 const app = express();
-router.use(express.json());
+app.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Ruta de climas');
 });
 
 // Obtener todos los registros de climas
-router.get('/', (req, res) => {
+app.get('/climas', (req, res) => {
     let sql = "SELECT * FROM t_climas;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 });
 
 // Insertar un nuevo clima utilizando el procedimiento almacenado
-router.post('/', (req, res) => {
+app.post('/climas', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pclima(?, ?, ?, ?, ?, ?, ?, ?)';
@@ -52,7 +52,7 @@ router.post('/', (req, res) => {
 });
 
 // Editar un clima
-router.put('/:id', (req, res) => { 
+app.put('/climas/:id', (req, res) => { 
     let id = req.params.id; 
     let { fecha, id_ubicacion, t_max, t_min, condiciones, precipitacion, humedad, id_fuente } = req.body;
 
@@ -68,7 +68,7 @@ router.put('/:id', (req, res) => {
 }); 
 
 // Eliminar un clima
-router.delete('/:id', (req, res) => { 
+app.delete('/climas/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_climas WHERE id_clima = ?'; 
 
@@ -84,4 +84,7 @@ router.delete('/:id', (req, res) => {
     }); 
 });
 
-module.exports = router
+// Servidor
+app.listen(puerto, () => {
+    console.log('Servidor OK en puerto: ' + puerto);
+});
