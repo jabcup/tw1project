@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); // Importar configuración desde data.js
-
+const dbConfig = require('./data'); 
+const router = express.Router()
 const app = express();
-app.use(express.json());
+router.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Ruta de usuarios');
 });
 
 // Obtener todos los usuarios
-app.get('/usuarios', (req, res) => {
+router.get('/', (req, res) => {
     let sql = "SELECT * FROM t_usuarios;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ app.get('/usuarios', (req, res) => {
 });
 
 // Insertar un nuevo usuario utilizando el procedimiento almacenado
-app.post('/usuarios', (req, res) => {
+router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL p_usuario(?, ?, ?, ?)';
@@ -48,7 +48,7 @@ app.post('/usuarios', (req, res) => {
 });
 
 // Editar un usuario
-app.put('/usuarios/:id', (req, res) => { 
+router.put('/:id', (req, res) => { 
     let id = req.params.id; 
     let nombres = req.body.nombres_usuario; 
     let apellidos = req.body.apellidos_usuario; 
@@ -68,7 +68,7 @@ app.put('/usuarios/:id', (req, res) => {
 }); 
 
 // Eliminar un usuario
-app.delete('/usuarios/:id', (req, res) => { 
+router.delete('/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_usuarios WHERE id_usuario = ?'; 
 
@@ -84,7 +84,4 @@ app.delete('/usuarios/:id', (req, res) => {
     }); 
 });
 
-// Servidor
-app.listen(puerto, () => {
-    console.log('Servidor OK en puerto: ' + puerto);
-});
+module.exports = router
