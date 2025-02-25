@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); // Importar configuración desde data.js
-
+const dbConfig = require('./data'); 
+const router = express.Router()
 const app = express();
-app.use(express.json());
+router.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Ruta de temas');
 });
 
 // Obtener todos los temas
-app.get('/temas', (req, res) => {
+router.get('/', (req, res) => {
     let sql = "SELECT * FROM t_temas;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ app.get('/temas', (req, res) => {
 });
 
 // Insertar un nuevo tema utilizando el procedimiento almacenado
-app.post('/temas', (req, res) => {
+router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pt_tema(?, ?, ?)';
@@ -47,7 +47,7 @@ app.post('/temas', (req, res) => {
 });
 
 // Editar un tema
-app.put('/temas/:id', (req, res) => { 
+router.put('/:id', (req, res) => { 
     let id = req.params.id; 
     let { nombre_tema, descripcion_tema, id_fuente } = req.body;
 
@@ -63,7 +63,7 @@ app.put('/temas/:id', (req, res) => {
 }); 
 
 // Eliminar un tema
-app.delete('/temas/:id', (req, res) => { 
+router.delete('/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_temas WHERE id_tema = ?'; 
 
@@ -79,7 +79,4 @@ app.delete('/temas/:id', (req, res) => {
     }); 
 });
 
-// Servidor
-app.listen(puerto, () => {
-    console.log('Servidor OK en puerto: ' + puerto);
-});
+module.exports = router

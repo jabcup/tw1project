@@ -1,21 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
-const dbConfig = require('./data'); // Importar configuración desde data.js
-
+const dbConfig = require('./data'); 
+const router = express.Router()
 const app = express();
-app.use(express.json());
+router.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
 // Ruta de inicio
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Ruta de ubicaciones');
 });
 
 // Obtener todas las ubicaciones
-app.get('/ubicaciones', (req, res) => {
+router.get('/', (req, res) => {
     let sql = "SELECT * FROM t_ubicaciones;";
     conexion.query(sql, (err, resultados) => {
         if (err) {
@@ -27,7 +27,7 @@ app.get('/ubicaciones', (req, res) => {
 });
 
 // Insertar una nueva ubicación utilizando el procedimiento almacenado
-app.post('/ubicaciones', (req, res) => {
+router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     let sql = 'CALL pt_ubicacion(?)';
@@ -45,7 +45,7 @@ app.post('/ubicaciones', (req, res) => {
 });
 
 // Editar una ubicación
-app.put('/ubicaciones/:id', (req, res) => { 
+router.put('/:id', (req, res) => { 
     let id = req.params.id; 
     let { nombre_ubicacion } = req.body;
 
@@ -61,7 +61,7 @@ app.put('/ubicaciones/:id', (req, res) => {
 }); 
 
 // Eliminar una ubicación
-app.delete('/ubicaciones/:id', (req, res) => { 
+router.delete('/:id', (req, res) => { 
     let id = req.params.id; 
     let sql = 'DELETE FROM t_ubicaciones WHERE id_ubicacion = ?'; 
 
@@ -77,7 +77,4 @@ app.delete('/ubicaciones/:id', (req, res) => {
     }); 
 });
 
-// Servidor
-app.listen(puerto, () => {
-    console.log('Servidor OK en puerto: ' + puerto);
-});
+module.exports = router
