@@ -9,11 +9,6 @@ const puerto = 2000;
 // Configuración de la conexión a MySQL usando los datos de data.js
 const conexion = mysql.createPool(dbConfig);
 
-// Ruta de inicio
-router.get('/', (req, res) => {
-    res.send('Ruta de datos de monedas');
-});
-
 // Obtener todos los datos de monedas
 router.get('/', (req, res) => {
     let sql = "SELECT * FROM t_datos_monedas;";
