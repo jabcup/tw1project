@@ -8,7 +8,7 @@ require 'date'
 
 api_key = 'nrjrerpGpnikyvKgAR5o31VKGMAVq2bt'
 $key = "?apikey=#{api_key}"
-$LKey = {La Paz: '33655', Oruro: '34377', Potosi: '35114', Santa Cruz: '36300', Beni: '', Pando: '', Cochabamba:'' , Chuquisaca: '', Tarija: ''}
+$LKey = { 'La Paz' => '33655', 'Oruro' => '34377', 'Potosi' => '35114', 'Santa Cruz' => '36300', 'Beni' => '32769', 'Pando' => '34480', 'Cochabamba' => '32716', 'Chuquisaca' => '32544', 'Tarija' => '36802' }
 
 
 class AccuScrapper
