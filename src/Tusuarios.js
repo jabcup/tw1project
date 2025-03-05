@@ -38,7 +38,9 @@ router.post('/', (req, res) => {
             console.error('Error al insertar usuario:', err.message);
             return res.status(500).json({ error: 'No se pudo insertar el usuario' });
         }
-        res.json({ mensaje: 'Usuario agregado correctamente' });
+
+        const id_usuario = resultado[0][0].id_usuario;
+        res.json({ mensaje: 'Usuario agregado correctamente', id_usuario });
     });
 });
 

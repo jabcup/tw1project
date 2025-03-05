@@ -1,6 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 2000;
+
+app.use(cors({
+  origin: '*', // Permitir acceso desde cualquier origen
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+}));
 
 app.use(express.json());
 
@@ -11,10 +18,6 @@ app.use('/Tclimas', climas);
 //Tabla datos monedas de la base de datos
 const datosMonedas = require('./src/Tdatosmonedas');
 app.use('/Tdatosmonedas', datosMonedas);
-
-//Tabla eventos de la base de datos
-const eventos = require('./src/Teventos');
-app.use('/Teventos', eventos);
 
 //Tabla fuentes de la base de datos
 const fuentes = require('./src/Tfuentes');
@@ -55,6 +58,9 @@ app.use('/Tubicaciones', ubicaciones);
 //Tabla usuarios de la base de datos
 const usuarios = require('./src/Tusuarios');
 app.use('/Tusuarios', usuarios);
+
+const login = require('./src/login');
+app.use('/login', login);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

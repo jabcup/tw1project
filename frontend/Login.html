@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Consultorio</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #0f0;
+            background-color: #000;
+            color: #0f0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0c0;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        #btnRegister {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        #btnRegister:hover {
+            background-color: #0c0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bienvenido</h1>
+    <form id="loginForm">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Iniciar Sesión</button>
+
+        <button id="btnRegister" type="button">¿No tienes una cuenta? ¡Regístrate!</button>
+
+        <div class="error" id="error"></div>
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            const usuario = document.getElementById('usuario').value;
+            const password = document.getElementById('password').value;
+    
+            fetch('http://localhost:2000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ usuario, password })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Guardar datos del usuario en localStorage para mantener la sesión
+                        localStorage.setItem('id_usuario', data.id_usuario);
+                        localStorage.setItem('nombres_usuario', data.nombres_usuario);
+                        localStorage.setItem('apellidos_usuario', data.apellidos_usuario);
+                        localStorage.setItem('usuario', data.usuario);
+                        localStorage.setItem('id_rol', data.id_rol);
+    
+                        if (data.id_rol === 2) {
+                            window.location.href = 'index.html';
+                        } else if (data.id_rol === 1) {
+                            window.location.href = 'admin.html';
+                        } else {
+                            document.getElementById('error').textContent = 'Rol no válido';
+                        }
+                    } else {
+                        document.getElementById('error').textContent = 'Usuario o contraseña incorrectos';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('error').textContent = 'Error al conectar con el servidor';
+                });
+        });
+    
+        document.getElementById('btnRegister').addEventListener('click', function () {
+            window.location.href = 'Register.html';
+        });
+    </script>    
+
+</body>
+
+</html>

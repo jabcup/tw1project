@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro y Preferencias</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border: 2px solid #0f0;
+            border-radius: 10px;
+        }
+
+        .form-section {
+            width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #0f0;
+            background-color: #000;
+            color: #0f0;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 5px #0f0; }
+            50% { box-shadow: 0 0 20px #0f0; }
+            100% { box-shadow: 0 0 5px #0f0; }
+        }
+
+        button:hover {
+            background-color: #0c0;
+        }
+
+        .error, .success, .message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .error { color: #f00; }
+        .success, .message { color: #0f0; }
+
+        .back {
+            margin-top: 15px;
+            color: #0f0;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Registro de Usuario -->
+        <div class="form-section">
+            <h2>Registro de Usuario</h2>
+            <input type="text" id="nombres_usuario" placeholder="Nombres" required>
+            <input type="text" id="apellidos_usuario" placeholder="Apellidos" required>
+            <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button id="btnRegistrar">Registrarse</button>
+            <a href="Login.html" class="back">¿Ya tienes cuenta? Inicia sesión</a>
+            <div class="error" id="error"></div>
+            <div class="success" id="success"></div>
+        </div>
+
+        <!-- Preferencias -->
+        <div class="form-section">
+            <h2>Configurar Preferencias</h2>
+            <label for="ubicacion">Ubicación:</label>
+            <select id="ubicacion" disabled>
+                <option value="">Selecciona una ubicación</option>
+            </select>
+
+            <label for="notification_time">Hora de Notificación:</label>
+            <input type="time" id="notification_time" disabled>
+
+            <button id="btnGuardarPreferencia" disabled>Guardar Preferencia</button>
+            <div class="message" id="mensaje"></div>
+        </div>
+    </div>
+
+    <script>
+        let id_usuario = null;
+
+        // Cargar ubicaciones al iniciar
+        fetch('http://localhost:2000/Tubicaciones')
+            .then(response => response.json())
+            .then(ubicaciones => {
+                const selectUbicacion = document.getElementById('ubicacion');
+                ubicaciones.forEach(ubicacion => {
+                    const option = document.createElement('option');
+                    option.value = ubicacion.id_ubicacion;
+                    option.textContent = ubicacion.nombre_ubicacion;
+                    selectUbicacion.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error al cargar ubicaciones:', error));
+
+        document.getElementById('btnRegistrar').addEventListener('click', () => {
+            const nombres_usuario = document.getElementById('nombres_usuario').value.trim();
+            const apellidos_usuario = document.getElementById('apellidos_usuario').value.trim();
+            const usuario = document.getElementById('usuario').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            const errorDiv = document.getElementById('error');
+            const successDiv = document.getElementById('success');
+            errorDiv.textContent = '';
+            successDiv.textContent = '';
+
+            if (!nombres_usuario || !apellidos_usuario || !usuario || !password) {
+                errorDiv.textContent = 'Todos los campos son obligatorios.';
+                return;
+            }
+
+            fetch('http://localhost:2000/Tusuarios', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nombres_usuario, apellidos_usuario, usuario, password })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Error en el registro.');
+                return response.json();
+            })
+            .then(data => {
+                if (data.id_usuario) {
+                    id_usuario = data.id_usuario;
+                    successDiv.textContent = 'Registro exitoso. Ahora configura tus preferencias.';
+                    document.getElementById('ubicacion').disabled = false;
+                    document.getElementById('notification_time').disabled = false;
+                    document.getElementById('btnGuardarPreferencia').disabled = false;
+                } else {
+                    throw new Error('No se recibió el id del usuario.');
+                }
+            })
+            .catch(error => {
+                errorDiv.textContent = 'Error al registrar. Verifica los datos o intenta más tarde.';
+                console.error('Error:', error);
+            });
+        });
+
+        document.getElementById('btnGuardarPreferencia').addEventListener('click', () => {
+            const id_ubicacion = document.getElementById('ubicacion').value;
+            const notification_time = document.getElementById('notification_time').value;
+            const mensajeDiv = document.getElementById('mensaje');
+
+            if (!id_ubicacion || !notification_time) {
+                mensajeDiv.textContent = 'Debes seleccionar una ubicación y hora.';
+                return;
+            }
+
+            fetch('http://localhost:2000/Tpreferencias', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id_usuario, id_ubicacion, notification_time })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Error al guardar preferencia');
+                return response.json();
+            })
+            .then(() => {
+                mensajeDiv.textContent = 'Preferencia guardada exitosamente.';
+            })
+            .catch(error => {
+                mensajeDiv.textContent = 'Error al guardar preferencia.';
+                console.error(error);
+            });
+        });
+    </script>
+
+</body>
+</html>
