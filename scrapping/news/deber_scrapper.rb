@@ -45,7 +45,7 @@ class DeberScrapper < Noticia
 		noticias = []
 		article_list = page.css('div.view-content div.titulo-teaser-2col  a')
 		article_list.each do |articulo|
-			noticias.push({"titular"=> articulo.text.gsub(/\s*\n              \n            \s*/, ' ').strip, "url"=>articulo[:href]})
+			noticias.push({"titulo"=> articulo.text.gsub(/\s*\n              \n            \s*/, ' ').strip, "url"=>'https://eldeber.com.bo'+articulo[:href], "id_fuente"=>1})
 		end
 		return noticias
 	end
@@ -71,8 +71,3 @@ class DeberScrapper < Noticia
 	end
 	
 end
-
-
-
-prueba = DeberScrapper.new
-puts prueba.get_news

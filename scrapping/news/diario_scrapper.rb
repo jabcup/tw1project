@@ -39,7 +39,7 @@ class DiarioScrapper < Noticia
 		titulares = []
 		article_list.each do |article|
 			unless article.text == 'Ver más' or article.text == '' or article.text == 'vista'
-				titulares.push({"titulo" => article.text, "url" => article[:href]})
+				titulares.push({"titulo" => article.text, "url" => article[:href], "id_fuente"=>2})
 			end
 		end
 		page_number = page.css('span.pages').text[-1].to_i
@@ -51,7 +51,7 @@ class DiarioScrapper < Noticia
 				article_list = page.css("div#tdi_#{tdi} a")
 				article_list.each do |article|
 					unless article.text == 'Ver más' or article.text == '' or article.text == 'vista'
-						titulares.push({"titulo" => article.text, "url" => article[:href]})
+						titulares.push({"titulo" => article.text, "url" => article[:href], "id_fuente"=>2})
 					end
 				end
 			end
@@ -79,23 +79,20 @@ class DiarioScrapper < Noticia
 		get_list(@secciones+'economia',58)
 	end
 
-	def get_list_nacional
+	def get_news
 		get_list(@secciones+'nacional',58)
 	end
 
-	def get_list_internacional
+	def get_internacional
 		get_list(@secciones+'internacional',58)
 	end
 
-	def get_list_seguridad
-		get_list(@secciones+'seguridad',58)
+	def get_seguridad
+		get_list(@secciones+'sociedad',58)
 	end
 
-	def get_list_deportes
+	def get_deportes
 		get_list(@secciones+'deportes',58)
 	end
 
 end
-
-prueba = DiarioScrapper.new
-puts prueba.get_list_politica

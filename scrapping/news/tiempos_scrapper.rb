@@ -38,7 +38,7 @@ class TiemposScrapper < Noticia
 		titulares = []
 		article_list.each do |article|
 			unless article.text == 'Ver más' or article.text == '' or article.text == 'vista' or article[:href].include?(rama) == false
-				titulares.push({"titulo" => article.text, "url" => article[:href]})
+				titulares.push({"titulo" => article.text, "url" => 'https://www.lostiempos.com/'+article[:href], "id_fuente"=>3})
 			end
 		end
 		return titulares
@@ -51,7 +51,7 @@ class TiemposScrapper < Noticia
 		titulares = []
 		article_list.each do |article|
 			unless article.text == 'Ver más' or article.text == '' or article.text == 'vista' or article.text == 'siguiente'
-				titulares.push({"titulo" => article.text, "url" => article[:href]})
+				titulares.push({"titulo" => article.text, "url" => 'https://www.lostiempos.com/'+article[:href], "id_fuente"=>3})
 			end
 		end
 		url = "https://www.lostiempos.com/ultimas-noticias?page=1"
@@ -59,7 +59,7 @@ class TiemposScrapper < Noticia
 		article_list = page.css('div.view.view-ultimas.view-id-ultimas.noticias-lt-block a')
 		article_list.each do |article|
 			unless article.text == 'Ver más' or article.text == '' or article.text == 'vista' or article.text == 'siguiente' or article.text == 'anterior'
-				titulares.push({"titulo" => article.text, "url" => article[:href]})
+				titulares.push({"titulo" => article.text, "url" => 'https://www.lostiempos.com/'+article[:href], "id_fuente"=>3})
 			end
 		end
 
@@ -80,7 +80,7 @@ class TiemposScrapper < Noticia
 		self.get_list('deportes')
 	end
 
-	def get_pais
+	def get_news
 		self.get_list('actualidad/pais')
 	end
 
@@ -96,7 +96,3 @@ class TiemposScrapper < Noticia
 		self.get_list('actualidad/seguridad')
 	end
 end
-
-prueba = TiemposScrapper.new
-
-puts prueba.get_incidentes

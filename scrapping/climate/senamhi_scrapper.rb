@@ -63,22 +63,12 @@ class SenamhiScrapper
 
 	def SetData(doc)
 		self.fecha = Date.today
-		self.ubicacion = "prueba"
 		self.tmax = doc.css('span#tmax').text
 		self.tmin = doc.css('span#tmin').text
 		self.condiciones = doc.css('span#fenomeno').text.downcase
 		self.precipitacion = doc.css('span#pcpn').text
 		self.humedad = 0
-		self.fuente = 1
-		print 'la estacion es: '
-		puts doc.css('span#estacion').text
+		self.fuente = 6
 	end
 end
 
-
-test = SenamhiScrapper.new()
-test.SetData(test.LoadExternData("https://senamhi.gob.bo/index.php/inicio"))
-
-puts test.fecha
-puts test.tmax
-puts test.tmin

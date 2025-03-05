@@ -3,7 +3,6 @@ const mysql = require('mysql2');
 const dbConfig = require('./data'); 
 const router = express.Router()
 const app = express();
-router.use(express.json());
 const puerto = 2000;
 
 // Configuración de la conexión a MySQL usando los datos de data.js
@@ -29,7 +28,7 @@ router.get('/', (req, res) => {
 // Insertar una nueva noticia utilizando el procedimiento almacenado
 router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
-
+    //console.log(req)
     let sql = 'CALL pnoticia(?, ?, ?, ?, ?)';
     let valores = [
         req.body.id_fuente,

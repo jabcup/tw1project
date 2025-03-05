@@ -1,0 +1,302 @@
+la url es: http://eldeber.com.bo/mundo/
+importado aparentemente
+la url es: http://eldeber.com.bo/economia/
+importado aparentemente
+la url es: http://eldeber.com.bo/pais/
+importado aparentemente
+la url es: http://eldeber.com.bo/sports/
+importado aparentemente
+obteniendo noticias de la url: https://www.eldiario.net/portal/2025/03/04
+cantidad de titulares obtenidos: 40
+obteniendo noticias de la url: https://www.eldiario.net/portal/category/secciones/economia
+cantidad de titulares obtenidos: 24
+obteniendo noticias de la url: https://www.eldiario.net/portal/category/secciones/nacional
+cantidad de titulares obtenidos: 24
+obteniendo noticias de la url: https://www.eldiario.net/portal/category/secciones/deportes
+cantidad de titulares obtenidos: 24
+obteniendo noticias de la url: https://www.eldiario.net/portal/category/secciones/internacional
+cantidad de titulares obtenidos: 24
+obteniendo noticias de la url: https://www.eldiario.net/portal/category/secciones/sociedad
+cantidad de titulares obtenidos: 24
+========================NOTICIAS DE DEPORTES========================
+{"titular"=>"Con Viscarra, Alianza Lima se impuso (1-2) a Deportes Iquique", "url"=>"https://eldeber.com.bo/futbol/con-viscarra-alianza-lima-se-impuso-1-2-deportes-iquique_505727/"}
+{"titular"=>"El Arsenal de Arteta golea 1-7 al PSV y acaricia los cuartos de final", "url"=>"https://eldeber.com.bo/futbol/el-arsenal-de-arteta-golea-1-7-al-psv-y-acaricia-los-cuartos-de-final_505722/"}
+{"titular"=>"El Dortmund no pasa de un empate 1-1 ante un Lille", "url"=>"https://eldeber.com.bo/futbol/el-dortmund-no-pasa-de-un-empate-1-1-ante-un-lille_505720/"}
+{"titular"=>"El Real Madrid venció (2-1) al Atlético de Madrid y se lleva el derbi en Champions.", "url"=>"https://eldeber.com.bo/futbol/el-real-madrid-vencio-2-1-al-atletico-de-madrid-y-se-lleva-el-derbi-en-champions_505719/"}
+{"titular"=>"Aston Villa derrotó (1-3) a Brujas y toma ventaja en los octavos de la Champions", "url"=>"https://eldeber.com.bo/futbol/aston-villa-derroto-1-3-brujas-y-toma-ventaja-en-los-octavos-de-la-champions_505714/"}
+{"titular"=>"Monasterio no va más en Oriente; volvió Venegas", "url"=>"https://eldeber.com.bo/oriente-petrolero/monasterio-no-va-mas-en-oriente-volvio-venegas_505707/"}
+{"titular"=>"Matías Rivero y María Laura Sejas, clasificados para la Gira Europea: un logro histórico para el tenis boliviano", "url"=>"https://eldeber.com.bo/tenis/matias-rivero-y-maria-laura-sejas-clasificados-para-la-gira-europea-un-logro-historico-para-el-tenis-boliviano_505705/"}
+{"titular"=>"Daniel Velásquez sueña con el Mundial: Bolivia tendrá un representante en el Canotaje Velocidad en Italia", "url"=>"https://eldeber.com.bo/multideportivo/daniel-velasquez-suena-con-el-mundial-bolivia-tendra-un-representante-en-el-canotaje-velocidad-en-italia_505704/"}
+{"titular"=>"Blooming sufre una goleada en su debut en la Copa Libertadores Sub-20 ante Palmeiras (0-6)", "url"=>"https://eldeber.com.bo/futbol/blooming-sufre-una-goleada-en-su-debut-en-la-copa-libertadores-sub-20-ante-palmeiras-0-6_505698/"}
+{"titular"=>"Blooming sufre una goleada en su debut en la Copa Libertadores Sub-20 ante Palmeiras (0-6)", "url"=>"https://eldeber.com.bo/futbol/blooming-sufre-una-goleada-en-su-debut-en-la-copa-libertadores-sub-20-ante-palmeiras-0-6_505698/"}
+{"titular"=>"La FBF lamenta el fallecimiento del periodista cruceño Fernando Durán", "url"=>"https://eldeber.com.bo/fuera-de-juego/la-fbf-lamenta-el-fallecimiento-del-periodista-cruceno-fernando-duran_505694/"}
+{"titular"=>"Arranca la emoción de los octavos de final de la UEFA Champions League", "url"=>"https://eldeber.com.bo/futbol/arranca-la-emocion-de-los-octavos-de-final-de-la-uefa-champions-league_505692/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"COPA SUDAMERICANA EN PUERTAS", "url"=>"https://www.eldiario.net/portal/2025/03/03/copa-sudamericana-en-puertas/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"Cuatro por el título de verano", "url"=>"https://www.eldiario.net/portal/2025/03/03/cuatro-por-el-titulo-de-verano/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"FBF llama a Congreso para el martes 11", "url"=>"https://www.eldiario.net/portal/2025/03/03/fbf-llama-a-congreso-para-el-martes-11/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"Man. United queda fuera en ronda de penales", "url"=>"https://www.eldiario.net/portal/2025/03/03/man-united-queda-fuera-en-ronda-de-penales/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"TENIS S-14 : Matías Rivero es campeón del Banana Bowl", "url"=>"https://www.eldiario.net/portal/2025/03/03/tenis-s-14-matias-rivero-es-campeon-del-banana-bowl/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"Santa Cruz asegura organización de la final sudamericana", "url"=>"https://www.eldiario.net/portal/2025/03/03/santa-cruz-asegura-organizacion-de-la-final-sudamericana/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"La situación de Fernando Gago en Boca Juniors", "url"=>"https://www.eldiario.net/portal/2025/03/03/la-situacion-de-fernando-gago-en-boca-juniors/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"«Cinco pepinos»", "url"=>"https://www.eldiario.net/portal/2025/03/02/cinco-pepinos/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"Aurora apelará sanción por el caso Montaño", "url"=>"https://www.eldiario.net/portal/2025/03/02/aurora-apelara-sancion-por-el-caso-montano/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"Viscarra, el arquero de la semana", "url"=>"https://www.eldiario.net/portal/2025/03/02/viscarra-el-arquero-de-la-semana/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"Árbitros sancionarán córner en caso de demora del arquero", "url"=>"https://www.eldiario.net/portal/2025/03/02/arbitros-sancionaran-corner-en-caso-de-demora-del-arquero/"}
+{"titulo"=>"Deportes", "url"=>"https://www.eldiario.net/portal/category/secciones/deportes/"}
+{"titulo"=>"Boca recibe abucheos tras eliminación", "url"=>"https://www.eldiario.net/portal/2025/03/02/boca-recibe-abucheos-tras-eliminacion/"}
+{"titulo"=>"Murkel Dellien avanza a segunda ronda del Challenger de Córdoba", "url"=>"/deportes/tenis/20250304/murkel-dellien-avanza-segunda-ronda-del-challenger-cordoba"}
+{"titulo"=>"Oriente anuncia la salida de Monasterio, su reemplazó será Venegas", "url"=>"/deportes/futbol/20250304/oriente-anuncia-salida-monasterio-su-reemplazo-sera-venegas"}
+{"titulo"=>"Universitario y Aurora van por la gloria y el premio mayor de $us 900 mil", "url"=>"/deportes/futbol/20250302/universitario-aurora-van-gloria-premio-mayor-us-900-mil"}
+{"titulo"=>"Aurora recibe el fallo del TDD, pero observa  errores procedimentales", "url"=>"/deportes/futbol/20250302/aurora-recibe-fallo-del-tdd-pero-observa-errores-procedimentales"}
+{"titulo"=>"Wilster cae goleado ante Blooming y se despide del torneo", "url"=>"/deportes/futbol/20250302/wilster-cae-goleado-blooming-se-despide-del-torneo"}
+{"titulo"=>"Real Madrid cae y Atlético es líder momentáneo", "url"=>"/deportes/futbol-int/20250302/real-madrid-cae-atletico-es-lider-momentaneo"}
+{"titulo"=>" Marc Márquez arrasa con Ducati y se impone en la esprint de Tailandia", "url"=>"/deportes/motores/20250301/marc-marquez-arrasa-ducati-se-impone-esprint-tailandia"}
+{"titulo"=>"Bolívar golea a un anestesiado Aurora por 5-1 y avanza a semifinales", "url"=>"/deportes/futbol/20250301/bolivar-golea-anestesiado-aurora-5-1-avanza-semifinales"}
+{"titulo"=>"Urgente: TDD emite dura sanción contra Aurora, Gabriel Montaño y dos dirigentes celestes", "url"=>"/deportes/futbol/20250228/urgente-tdd-emite-dura-sancion-contra-aurora-gabriel-montano-dos-dirigentes"}
+{"titulo"=>"Universitario sufre para avanzar a semifinales del Torneo Amistoso de Verano (3-0)", "url"=>"/deportes/futbol/20250228/universitario-sufre-avanzar-semifinales-del-torneo-amistoso-verano-3-0"}
+{"titulo"=>" Neymar habría intercedido para que Terceros no salga del Santos, según la prensa brasileña", "url"=>"/deportes/futbol-int/20250228/neymar-habria-intercedido-que-terceros-no-salga-del-santos-prensa"}
+{"titulo"=>"Fase 3 de Copa Libertadores: sin clubes bolivianos, venezolanos, colombianos y la despedida de Boca", "url"=>"/deportes/futbol-int/20250228/fase-3-copa-libertadores-clubes-bolivianos-venezolanos-colombianos"}
+{"titulo"=>"Racing conquista su primera Recopa Sudamericana (0-2)", "url"=>"/deportes/futbol/20250228/racing-conquista-su-primera-recopa-sudamericana-0-2"}
+{"titulo"=>"Fiscalía amplía imputación formal contra Jaime Cornejo y dos directivos celestes más", "url"=>"/deportes/futbol/20250228/fiscalia-amplia-imputacion-formal-contra-jaime-cornejo-dos-directivos"}
+{"titulo"=>"Murkel Dellien avanza a segunda ronda del Challenger de Córdoba", "url"=>"/deportes/tenis/20250304/murkel-dellien-avanza-segunda-ronda-del-challenger-cordoba"}
+{"titulo"=>"Oriente anuncia la salida de Monasterio, su reemplazó será Venegas", "url"=>"/deportes/futbol/20250304/oriente-anuncia-salida-monasterio-su-reemplazo-sera-venegas"}
+
+
+
+
+========================NOTICIAS INTERNACIONALES========================
+{"titular"=>"Zelenski tiende la mano a Trump y propone una tregua parcial para avanzar hacia la paz", "url"=>"https://eldeber.com.bo/mundo/zelenski-tiende-la-mano-trump-y-propone-una-tregua-parcial-para-avanzar-hacia-la-paz_505716/"}
+{"titular"=>"Brasil, Bolivia, Chile, Colombia y Uruguay anuncian su apoyo a Ramdin para liderar la OEA", "url"=>"https://eldeber.com.bo/mundo/brasil-bolivia-chile-colombia-y-uruguay-anuncian-su-apoyo-ramdin-para-liderar-la-oea_505703/"}
+{"titular"=>"Catorce detenidos tras desmantelar red de prostitución de mujeres sudamericanas en España", "url"=>"https://eldeber.com.bo/mundo/catorce-detenidos-tras-desmantelar-red-de-prostitucion-de-mujeres-sudamericanas-en-espana_505697/"}
+{"titular"=>"Unas 49 unidades de bomberos trabajan para extinguir un incendio en zona comercial de Lima", "url"=>"https://eldeber.com.bo/mundo/unas-49-unidades-de-bomberos-trabajan-para-extinguir-un-incendio-en-zona-comercial-de-lima_505696/"}
+{"titular"=>"Cuba tendrá apagones simultáneos en el 52 % de su territorio este martes", "url"=>"https://eldeber.com.bo/mundo/cuba-tendra-apagones-simultaneos-en-el-52-de-su-territorio-este-martes_505693/"}
+{"titular"=>"El papa sigue tratamiento sin ventilación mecánica, tras las insuficiencias respiratorias", "url"=>"https://eldeber.com.bo/mundo/el-papa-sigue-tratamiento-sin-ventilacion-mecanica-tras-las-insuficiencias-respiratorias_505689/"}
+{"titular"=>"Dos arrestados por embolsarse 600.000 dólares vendiendo entradas robadas de Taylor Swift", "url"=>"https://eldeber.com.bo/mundo/dos-arrestados-por-embolsarse-600000-dolares-vendiendo-entradas-robadas-de-taylor-swift_505677/"}
+{"titular"=>"Arte y pasión por la tinta: la piel se convierte en lienzo en el 'Tattoo Show Argentina'", "url"=>"https://eldeber.com.bo/escenas/arte-y-pasion-por-la-tinta-la-piel-se-convierte-en-lienzo-en-el-tattoo-show-argentina_505668/"}
+{"titular"=>"El Carnaval se dispara en Brasil impulsado por el Óscar logrado por 'I'm Still Here'", "url"=>"https://eldeber.com.bo/escenas/el-carnaval-se-dispara-en-brasil-impulsado-por-el-oscar-logrado-por-im-still-here_505667/"}
+{"titular"=>"Cancelan el segundo concierto en Chile de Shakira, que se disculpa y promete volver", "url"=>"https://eldeber.com.bo/escenas/cancelan-el-segundo-concierto-en-chile-de-shakira-que-se-disculpa-y-promete-volver_505666/"}
+{"titular"=>"Melania Trump se estrena apoyando una ley contra la pornografía 'deepfake' generada con IA", "url"=>"https://eldeber.com.bo/mundo/melania-trump-se-estrena-apoyando-una-ley-contra-la-pornografia-deepfake-generada-con-ia_505665/"}
+{"titular"=>"Noboa recorre la zona de aluvión que dejó dos fallecidos y más de 400 afectados en Ecuador", "url"=>"https://eldeber.com.bo/mundo/noboa-recorre-la-zona-de-aluvion-que-dejo-dos-fallecidos-y-mas-de-400-afectados-en-ecuador_505664/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Trump advirtió a Zelenski que no tolerará exigencias para la paz", "url"=>"https://www.eldiario.net/portal/2025/03/04/trump-advirtio-a-zelenski-que-no-tolerara-exigencias-para-la-paz/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Liberan a 110 detenidos  tras protesta electoral", "url"=>"https://www.eldiario.net/portal/2025/03/04/liberan-a-110-detenidos-tras-protesta-electoral/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Líderes europeos anuncian coalición para futuro acuerdo de paz en Ucrania", "url"=>"https://www.eldiario.net/portal/2025/03/03/lideres-europeos-anuncian-coalicion-para-futuro-acuerdo-de-paz-en-ucrania/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"El Papa recibe visita de dos autoridades del Vaticano", "url"=>"https://www.eldiario.net/portal/2025/03/03/el-papa-recibe-visita-de-dos-autoridades-del-vaticano/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Israel suspende ingreso de  ayuda humanitaria a Gaza", "url"=>"https://www.eldiario.net/portal/2025/03/03/israel-suspende-ingreso-de-ayuda-humanitaria-a-gaza/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Nave espacial privada logra aterrizar con éxito en la Luna", "url"=>"https://www.eldiario.net/portal/2025/03/03/nave-espacial-privada-logra-aterrizar-con-exito-en-la-luna/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Las escuelas de samba  muestran su majestuosidad", "url"=>"https://www.eldiario.net/portal/2025/03/03/las-escuelas-de-samba-muestran-su-majestuosidad/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Uruguay y Alemania destacan valor de acuerdo UE – Mercosur", "url"=>"https://www.eldiario.net/portal/2025/03/03/uruguay-y-alemania-destacan-valor-de-acuerdo-ue-mercosur/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Machado pide a EEUU exponer crímenes del régimen de Maduro", "url"=>"https://www.eldiario.net/portal/2025/03/03/machado-pide-a-eeuu-exponer-crimenes-del-regimen-de-maduro/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"Rey Felipe apoya a Ucrania y su derecho a integración territorial", "url"=>"https://www.eldiario.net/portal/2025/03/03/rey-felipe-apoya-a-ucrania-y-su-derecho-a-integracion-territorial/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"PKK declara alto el fuego con Turquía y desarme", "url"=>"https://www.eldiario.net/portal/2025/03/02/pkk-declara-alto-el-fuego-con-turquia-y-desarme/"}
+{"titulo"=>"Internacional", "url"=>"https://www.eldiario.net/portal/category/secciones/internacional/"}
+{"titulo"=>"El Papa se encuentra estable y no volvió a sufrir crisis", "url"=>"https://www.eldiario.net/portal/2025/03/02/el-papa-se-encuentra-estable-y-no-volvio-a-sufrir-crisis/"}
+{"titulo"=>"El Papa pasó la noche estable en el hospital de Roma después de sufrir dos crisis respiratorias", "url"=>"/actualidad/mundo/20250304/papa-paso-noche-estable-hospital-roma-despues-sufrir-dos-crisis"}
+{"titulo"=>"Tras el incidente con Zelensky, Trump detiene la ayuda militar a Ucrania", "url"=>"/actualidad/mundo/20250304/incidente-zelensky-trump-detiene-ayuda-militar-ucrania"}
+{"titulo"=>"El Papa sufre dos episodios de insuficiencia respiratoria aguda", "url"=>"/actualidad/mundo/20250303/papa-sufre-dos-episodios-insuficiencia-respiratoria-aguda"}
+{"titulo"=>"Reino Unido, Francia y Ucrania acuerdan preparar un plan de alto el fuego para la guerra en Ucrania", "url"=>"/actualidad/mundo/20250302/reino-unido-francia-ucrania-acuerdan-preparar-plan-alto-fuego-guerra"}
+{"titulo"=>"El Papa agradece desde el hospital las oraciones por su recuperación: \"Me siento sostenido por todo el pueblo de Dios\"", "url"=>"/actualidad/mundo/20250302/papa-agradece-hospital-oraciones-su-recuperacion-me-siento-sostenido-todo"}
+{"titulo"=>"El papa toma café y descansa tras sufrir un espasmo bronquial que requiere más ventilación", "url"=>"/actualidad/mundo/20250301/papa-toma-cafe-descansa-sufrir-espasmo-bronquial-que-requiere-mas"}
+{"titulo"=>"Brasil espera batir récord de turistas extranjeros en 2025", "url"=>"/actualidad/mundo/20250301/brasil-espera-batir-record-turistas-extranjeros-2025"}
+{"titulo"=>"EEUU: Secretario de Estado exige disculpas de Zelenski por altercado en la Oficina Oval con Trump", "url"=>"/actualidad/mundo/20250301/eeuu-secretario-estado-exige-disculpas-zelenski-altercado-oficina-oval"}
+{"titulo"=>"EEUU y Ucrania rompen negociaciones del acuerdo sobre tierras raras tras la discusión entre Trump y Zelenski", "url"=>"/actualidad/mundo/20250228/eeuu-ucrania-rompen-negociaciones-del-acuerdo-tierras-raras-discusion"}
+{"titulo"=>"El papa Francisco fue conectado a un respirador tras sufrir un episodio respiratorio repentino", "url"=>"/actualidad/mundo/20250228/papa-francisco-fue-conectado-respirador-sufrir-episodio-respiratorio"}
+{"titulo"=>"La izquierda latinoamericana busca dar señal de unidad en Uruguay frente al auge ultra", "url"=>"/actualidad/mundo/20250228/izquierda-latinoamericana-busca-dar-senal-unidad-uruguay-frente-al-auge"}
+{"titulo"=>"Zelenski y Trump firmarán un pacto con inciertas garantías de seguridad para  Ucrania", "url"=>"/actualidad/mundo/20250227/zelenski-trump-firmaran-pacto-inciertas-garantias-seguridad-ucrania"}
+{"titulo"=>"Aún no identifican qué provocó el apagón de más de ocho horas en el 98% de Chile", "url"=>"/actualidad/mundo/20250227/aun-no-identifican-que-provoco-apagon-mas-ocho-horas-98-chile"}
+{"titulo"=>"Ucrania llega a un acuerdo con EEUU para compartir sus recursos naturales ", "url"=>"/actualidad/mundo/20250226/ucrania-llega-acuerdo-eeuu-compartir-sus-recursos-naturales"}
+{"titulo"=>"El Papa sufre dos episodios de insuficiencia respiratoria aguda", "url"=>"/actualidad/mundo/20250303/papa-sufre-dos-episodios-insuficiencia-respiratoria-aguda"}
+{"titulo"=>"El Papa pasó la noche estable en el hospital de Roma después de sufrir dos crisis respiratorias", "url"=>"/actualidad/mundo/20250304/papa-paso-noche-estable-hospital-roma-despues-sufrir-dos-crisis"}
+{"titulo"=>"Tras el incidente con Zelensky, Trump detiene la ayuda militar a Ucrania", "url"=>"/actualidad/mundo/20250304/incidente-zelensky-trump-detiene-ayuda-militar-ucrania"}
+
+
+
+
+========================NOTICIAS DE SEGURIDAD========================
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Policía confirma que chofer del bus  Emmanuel estaba totalmente ebrio", "url"=>"https://www.eldiario.net/portal/2025/03/03/policia-confirma-que-chofer-del-bus-emmanuel-estaba-totalmente-ebrio/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Dos súbditos brasileños son  entregados a sus autoridades", "url"=>"https://www.eldiario.net/portal/2025/03/03/dos-subditos-brasilenos-son-entregados-a-sus-autoridades/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Supuesto conductor de sicarios apuntan a  “El Colla” y asoman nexos con Marset", "url"=>"https://www.eldiario.net/portal/2025/03/03/supuesto-conductor-de-sicarios-apuntan-a-el-colla-y-asoman-nexos-con-marset/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Acusado de atracar a librecambista  pretendió escapar a Cochabamba", "url"=>"https://www.eldiario.net/portal/2025/03/03/acusado-de-atracar-a-librecambista-pretendio-escapar-a-cochabamba/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Roca aplasta un  minibús y mata  a dos pasajeros", "url"=>"https://www.eldiario.net/portal/2025/03/03/roca-aplasta-un-minibus-y-mata-a-dos-pasajeros/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Colisión frontal entre buses cobra 37 vidas en carretera Oruro-Potosí", "url"=>"https://www.eldiario.net/portal/2025/03/02/colision-frontal-entre-buses-cobra-37-vidas-en-carretera-oruro-potosi/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Envían a cárcel de Palmasola a tres implicados en asesinato de Aldunate", "url"=>"https://www.eldiario.net/portal/2025/03/02/envian-a-carcel-de-palmasola-a-tres-implicados-en-asesinato-de-aldunate/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Explosión en Quillacollo pudo evitarse; una comerciante encendió su cocina", "url"=>"https://www.eldiario.net/portal/2025/03/02/explosion-en-quillacollo-pudo-evitarse-una-comerciante-encendio-su-cocina/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Librecambista es atacado a tiros en Montero", "url"=>"https://www.eldiario.net/portal/2025/03/02/librecambista-es-atacado-a-tiros-en-montero/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Exministro Lima pide modificar delito de terrorismo por observaciones de la CIDH", "url"=>"https://www.eldiario.net/portal/2025/03/01/exministro-lima-pide-modificar-delito-de-terrorismo-por-observaciones-de-la-cidh/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Declaran caso “Golpe I” en receso hasta el 10 de marzo", "url"=>"https://www.eldiario.net/portal/2025/03/01/declaran-caso-golpe-i-en-receso-hasta-el-10-de-marzo/"}
+{"titulo"=>"Sociedad - Seguridad", "url"=>"https://www.eldiario.net/portal/category/sociedad/"}
+{"titulo"=>"Dos explosiones por gas dejan una pareja fallecida y nueve heridos", "url"=>"https://www.eldiario.net/portal/2025/03/01/dos-explosiones-por-gas-dejan-una-pareja-fallecida-y-nueve-heridos/"}
+{"titulo"=>"Carnaval trágico: En menos de 72 horas, más de 70 personas pierden la vida en accidentes de tránsito", "url"=>"/actualidad/seguridad/20250304/carnaval-tragico-menos-72-horas-mas-70-personas-pierden-vida"}
+{"titulo"=>"Descubren 7.000 litros de diésel almacenados ilegalmente en una vivienda en El Alto ", "url"=>"/actualidad/seguridad/20250304/descubren-7000-litros-diesel-almacenados-ilegalmente-vivienda-alto"}
+{"titulo"=>"Familiares reclaman el dedo cercenado de un joven en el Carnaval de Oruro para enterrarlo", "url"=>"/actualidad/seguridad/20250304/familiares-reclaman-dedo-cercenado-joven-carnaval-oruro-enterrarlo"}
+{"titulo"=>"Colisión en la vía Oruro-Potosí deja al menos 15 fallecidos y 19 heridos", "url"=>"/actualidad/seguridad/20250303/colision-oruro-potosi-deja-al-menos-15-fallecidos-19-heridos"}
+{"titulo"=>"Suman 30 fallecidos tras embarrancamiento de bus en la carretera Oruro – Potosí", "url"=>"/actualidad/seguridad/20250303/suman-30-fallecidos-embarrancamiento-bus-carretera-oruro-potosi"}
+{"titulo"=>"Accidente de tránsito en la carretera Oruro-Pisiga deja dos muertos", "url"=>"/actualidad/seguridad/20250303/accidente-transito-carretera-oruro-pisiga-deja-dos-muertos"}
+{"titulo"=>"Arce exige investigar trágico accidente en vía Oruro – Potosí y expresa condolencias a familias dolientes", "url"=>"/actualidad/seguridad/20250303/arce-exige-investigar-tragico-accidente-oruro-potosi-expresa"}
+{"titulo"=>"Gobernación de Potosí declara duelo por 5 días tras decesos en accidentes de tránsito", "url"=>"/actualidad/seguridad/20250303/gobernacion-potosi-declara-duelo-5-dias-decesos-accidentes-transito"}
+{"titulo"=>"Destruyen pista clandestina y laboratorios de cocaína en Villa Tunari y Entre Ríos", "url"=>"/actualidad/seguridad/20250302/destruyen-pista-clandestina-laboratorios-cocaina-villa-tunari-rios"}
+{"titulo"=>"Uyuni declara duelo de 3 días por accidente que dejó 37 fallecidos y la ATT suspende a empresa infractora", "url"=>"/actualidad/seguridad/20250302/uyuni-declara-duelo-3-dias-accidente-que-dejo-37-fallecidos-att"}
+{"titulo"=>"Supuesto chofer de sicarios del capitán Aldunate, dice que recibió órdenes de ‘El Colla’", "url"=>"/actualidad/seguridad/20250302/supuesto-chofer-sicarios-del-capitan-aldunate-dice-que-recibio-ordenes"}
+{"titulo"=>"Fallece el chofer que causó el accidente en Uyuni y confirman que conducía borracho", "url"=>"/actualidad/seguridad/20250302/fallece-chofer-que-causo-accidente-uyuni-confirman-que-conducia"}
+{"titulo"=>"Al menos 37 fallecidos y más de 30 heridos deja el choque entre dos buses en Uyuni", "url"=>"/actualidad/seguridad/20250301/al-menos-37-fallecidos-mas-30-heridos-deja-choque-dos-buses-uyuni"}
+{"titulo"=>"Colisión entre buses deja varios fallecidos y heridos en Uyuni", "url"=>"/actualidad/seguridad/20250301/colision-buses-deja-varios-fallecidos-heridos-uyuni"}
+{"titulo"=>"Carnaval trágico: En menos de 72 horas, más de 70 personas pierden la vida en accidentes de tránsito", "url"=>"/actualidad/seguridad/20250304/carnaval-tragico-menos-72-horas-mas-70-personas-pierden-vida"}
+{"titulo"=>"Descubren 7.000 litros de diésel almacenados ilegalmente en una vivienda en El Alto ", "url"=>"/actualidad/seguridad/20250304/descubren-7000-litros-diesel-almacenados-ilegalmente-vivienda-alto"}
+{"titulo"=>"Carnaval trágico: En menos de 72 horas, más de 70 personas pierden la vida en accidentes de tránsito", "url"=>"/actualidad/seguridad/20250304/carnaval-tragico-menos-72-horas-mas-70-personas-pierden-vida"}
+{"titulo"=>"Descubren 7.000 litros de diésel almacenados ilegalmente en una vivienda en El Alto ", "url"=>"/actualidad/seguridad/20250304/descubren-7000-litros-diesel-almacenados-ilegalmente-vivienda-alto"}
+
+
+
+
+========================NOTICIAS NACIONALES========================
+{"titular"=>"Carnaval de Oruro: víctima perdió el dedo cuando su anillo quedó enganchado en una gradería", "url"=>"https://eldeber.com.bo/pais/carnaval-de-oruro-victima-perdio-el-dedo-cuando-su-anillo-quedo-enganchado-en-una-graderia_505726/"}
+{"titular"=>"Evo pide esperar para ‘definir’ la nueva  sigla del ‘instrumento político’", "url"=>"https://eldeber.com.bo/pais/evo-pide-esperar-para-definir-la-nueva-sigla-del-instrumento-politico_505723/"}
+{"titular"=>"Desde enero, 127 personas murieron en accidentes de tránsito; 70 solo en Carnaval", "url"=>"https://eldeber.com.bo/pais/desde-enero-127-personas-murieron-en-accidentes-de-transito-70-solo-en-carnaval_505713/"}
+{"titular"=>"Fiscalía: el chofer del accidente con 31  muertos, no tenía licencia de conducir", "url"=>"https://eldeber.com.bo/pais/fiscalia-el-chofer-del-accidente-con-31-muertos-no-tenia-licencia-de-conducir_505708/"}
+{"titular"=>"Embarrancamiento en Leñas: IDIF entregó 29 certificados de defunción, pero aún hay dos víctimas sin identificar", "url"=>"https://eldeber.com.bo/pais/embarrancamiento-de-bus-en-lenas-idif-entrego-29-certificados-de-defuncion-pero-aun-hay-dos-victimas-sin-identificar_505702/"}
+{"titular"=>"El Alto: imputan a dos personas por almacenar 7.000 litros de diésel destinado al comercio ilegal", "url"=>"https://eldeber.com.bo/pais/el-alto-imputan-dos-personas-por-almacenar-7000-litros-de-diesel-destinado-al-comercio-ilegal_505701/"}
+{"titular"=>"El 32 % de los adultos en Bolivia padece de obesidad, según un informe internacional", "url"=>"https://eldeber.com.bo/pais/el-32-de-los-adultos-en-bolivia-padece-de-obesidad-segun-un-informe-internacional_505699/"}
+{"titular"=>"Estas son las listas de fallecidos y heridos en el trágico accidente en la carretera Potosí-Oruro", "url"=>"https://eldeber.com.bo/pais/estas-son-las-listas-de-fallecidos-y-heridos-en-el-tragico-accidente-en-la-carretera-potosi-oruro_505695/"}
+{"titular"=>"Ca-pi-bara, ¡Capibara!: La mascota del 'vice' de Comunicación que carnavaleó", "url"=>"https://eldeber.com.bo/escenas/ca-pi-bara-capibara-la-mascota-del-vice-de-comunicacion-que-carnavaleo_505683/"}
+{"titular"=>"Martes de Ch’alla 2025: Terminales de buses paralizan operaciones en varias ciudades", "url"=>"https://eldeber.com.bo/pais/martes-de-challa-2025-terminales-de-buses-paralizan-operaciones-en-varias-ciudades_505688/"}
+{"titular"=>"Chofer de vagoneta particular declara y dice que la flota invadió carril", "url"=>"https://eldeber.com.bo/pais/chofer-de-vagoneta-particular-declara-y-dice-que-la-flota-invadio-carril_505687/"}
+{"titular"=>"Movimiento en centros de abastecimiento antes del martes de ch'alla", "url"=>"https://eldeber.com.bo/pais/movimiento-en-centros-de-abastecimiento-antes-del-martes-de-challa_505662/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Distribuidor de avenida Perú tiene el 47% de avance", "url"=>"https://www.eldiario.net/portal/2025/03/04/distribuidor-de-avenida-peru-tiene-el-47-de-avance/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Promueven atención médica de 6 patologías en el Viedma", "url"=>"https://www.eldiario.net/portal/2025/03/04/promueven-atencion-medica-de-6-patologias-en-el-viedma/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Fenavit 2025 promueve  desarrollo vitivinícola", "url"=>"https://www.eldiario.net/portal/2025/03/04/fenavit-2025-promueve-desarrollo-vitivinicola/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Tarijeños califican de inapropiada utilización de Chunchos en Oruro", "url"=>"https://www.eldiario.net/portal/2025/03/04/tarijenos-califican-de-inapropiada-utilizacion-de-chunchos-en-oruro/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Gobierno castiga a Santa Cruz  sin combustible en largo feriado", "url"=>"https://www.eldiario.net/portal/2025/03/04/gobierno-castiga-a-santa-cruz-sin-combustible-en-largo-feriado/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Potosí decreta cinco días de duelo por  víctimas en dos accidentes de tránsito", "url"=>"https://www.eldiario.net/portal/2025/03/04/potosi-decreta-cinco-dias-de-duelo-por-victimas-en-dos-accidentes-de-transito/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Joven fue atracado por un  taxista cuando volvía a su casa", "url"=>"https://www.eldiario.net/portal/2025/03/04/joven-fue-atracado-por-un-taxista-cuando-volvia-a-su-casa/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Parque Eólico de Santa Cruz  generará 153 megavatios", "url"=>"https://www.eldiario.net/portal/2025/03/03/parque-eolico-de-santa-cruz-generara-153-megavatios/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Creatividad en Corso Infantil y de Mascotas", "url"=>"https://www.eldiario.net/portal/2025/03/03/creatividad-en-corso-infantil-y-de-mascotas/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Jisk’a Anata: una fiesta que rescata danzas y promueve la inclusión", "url"=>"https://www.eldiario.net/portal/2025/03/03/jiska-anata-una-fiesta-que-rescata-danzas-y-promueve-la-inclusion/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Farándula carnavalera mostró  variedad de actividades artísticas", "url"=>"https://www.eldiario.net/portal/2025/03/03/farandula-carnavalera-mostro-variedad-de-actividades-artisticas/"}
+{"titulo"=>"Nacional", "url"=>"https://www.eldiario.net/portal/category/secciones/nacional/"}
+{"titulo"=>"Empezaron con  la “Ch´alla”; y  termina mañana", "url"=>"https://www.eldiario.net/portal/2025/03/03/empezaron-con-la-challa-y-termina-manana/"}
+{"titulo"=>"Bolivia, Brasil, Chile, Colombia y Uruguay apoyan candidatura del canciller de Surinam a la Secretaría General de la OEA", "url"=>"/actualidad/pais/20250304/bolivia-brasil-chile-colombia-uruguay-apoyan-candidatura-del-canciller"}
+{"titulo"=>"Nansana Kids recorre el complejo arqueológico de Tiwanaku y participa de una ofrenda a la Pachamama", "url"=>"/actualidad/pais/20250304/nansana-kids-recorre-complejo-arqueologico-tiwanaku-participa-ofrenda"}
+{"titulo"=>"Integrantes de Nansana Kids llegan a Sucre y degustan el chicharrón de llama", "url"=>"/actualidad/pais/20250303/integrantes-nansana-kids-llegan-sucre-degustan-chicharron-llama"}
+{"titulo"=>"\"Hollywood paceño”: La Alcaldía realiza la ch'alla del Mirador La Paz", "url"=>"/actualidad/pais/20250303/hollywood-paceno-alcaldia-realiza-challa-del-mirador-paz"}
+{"titulo"=>"Carnaval de Oruro suma 3 reconocimientos de la Unesco incluido el patrocinio de este año por el Bicentenario", "url"=>"/actualidad/pais/20250302/carnaval-oruro-suma-3-reconocimientos-unesco-incluido-patrocinio-este-ano"}
+{"titulo"=>"Pese a su acuerdo con FPV, Evo pide a sus seguidores no inscribirse en este partido político", "url"=>"/actualidad/pais/20250302/pese-su-acuerdo-fpv-evo-pide-sus-seguidores-no-inscribirse-este-partido"}
+{"titulo"=>"Evo pide a exmilitantes del MAS no inscribirse en el FPV y esperar nueva sigla", "url"=>"/actualidad/pais/20250302/evo-pide-exmilitantes-del-mas-no-inscribirse-fpv-esperar-nueva-sigla"}
+{"titulo"=>"Reportan la muerte de dos personas por caída de rocas en Tarija", "url"=>"/actualidad/pais/20250302/reportan-muerte-dos-personas-caida-rocas-tarija"}
+{"titulo"=>"El Carnaval de Oruro 2025 deslumbra en el Bicentenario de Bolivia", "url"=>"/actualidad/pais/20250302/carnaval-oruro-2025-deslumbra-bicentenario-bolivia"}
+{"titulo"=>"Tragedia en Uyuni: Choque entre dos buses deja unos 37 muertos y más de 30 heridos", "url"=>"/actualidad/pais/20250302/tragedia-uyuni-choque-dos-buses-deja-37-muertos-mas-30-heridos"}
+{"titulo"=>"Conoce 10 sugerencias para pasar  un Carnaval seguro y sin incidentes", "url"=>"/actualidad/pais/20250302/conoce-10-sugerencias-pasar-carnaval-seguro-incidentes"}
+{"titulo"=>"Envían a prisión a tres sospechosos del asesinato del capitán Aldunate", "url"=>"/actualidad/pais/20250302/envian-prision-tres-sospechosos-del-asesinato-del-capitan-aldunate"}
+{"titulo"=>"Plazo fatal para aprobar leyes que   blinden los comicios es fin de marzo", "url"=>"/actualidad/pais/20250302/plazo-fatal-aprobar-leyes-que-blinden-comicios-es-fin-marzo"}
+{"titulo"=>"Llegan a Bolivia tres deportados desde Estados Unidos", "url"=>"/actualidad/pais/20250302/llegan-bolivia-tres-deportados-estados-unidos"}
+{"titulo"=>"Bolivia, Brasil, Chile, Colombia y Uruguay apoyan candidatura del canciller de Surinam a la Secretaría General de la OEA", "url"=>"/actualidad/pais/20250304/bolivia-brasil-chile-colombia-uruguay-apoyan-candidatura-del-canciller"}
+{"titulo"=>"Bolivia, Brasil, Chile, Colombia y Uruguay apoyan candidatura del canciller de Surinam a la Secretaría General de la OEA", "url"=>"/actualidad/pais/20250304/bolivia-brasil-chile-colombia-uruguay-apoyan-candidatura-del-canciller"}
+{"titulo"=>"\"Hollywood paceño”: La Alcaldía realiza la ch'alla del Mirador La Paz", "url"=>"/actualidad/pais/20250303/hollywood-paceno-alcaldia-realiza-challa-del-mirador-paz"}
+
+
+
+
+========================NOTICIAS DE ECONOMIA========================
+{"titular"=>"Combustible y confiscación: Dos frentes que ponen a prueba la sagacidad del Gobierno", "url"=>"https://eldeber.com.bo/economia/combustible-y-confiscacion-dos-frentes-que-ponen-prueba-la-sagacidad-del-gobierno_505729/"}
+{"titular"=>"Comité pro Santa Cruz convoca a una reunión “ante inminente colapso económico”", "url"=>"https://eldeber.com.bo/economia/comite-pro-santa-cruz-convoca-una-reunion-ante-inminente-colapso-economico_505721/"}
+{"titular"=>"Este miércoles el servicio del transporte urbano de Santa Cruz está garantizado, el sector tendrá una reunión con YPFB y la ANH", "url"=>"https://eldeber.com.bo/economia/el-miercoles-el-servicio-del-transporte-urbano-de-santa-cruz-esta-garantizado-el-sector-tendra-una-reunion-con-ypfb-y-la-anh_505717/"}
+{"titular"=>"Comerciantes de mercados atenderán a 'media máquina' la jornada del miércoles", "url"=>"https://eldeber.com.bo/economia/comerciantes-de-mercados-atenderan-media-maquina-la-jornada-del-miercoles_505715/"}
+{"titular"=>"A dos años del inicio de la crisis cambiaria, no se vislumbra una solución efectiva, advierte economista", "url"=>"https://eldeber.com.bo/economia/crisis-cambiaria-en-bolivia-dos-anos-sin-solucion-y-con-mercado-negro-fortalecido_505649/"}
+{"titular"=>"Trump anuncia aranceles a las importaciones de productos agrícolas desde el 2 de abril", "url"=>"https://eldeber.com.bo/economia/trump-anuncia-aranceles-las-importaciones-de-productos-agricolas-desde-el-2-de-abril_505653/"}
+{"titular"=>"Calculan que el complejo del Mutún puede extender su producción hasta 70 años, dependiendo del mantenimiento", "url"=>"https://eldeber.com.bo/economia/calculan-que-el-complejo-del-mutun-puede-extender-su-produccion-hasta-70-anos-dependiendo-del-mantenimiento_505644/"}
+{"titular"=>"Crece la desesperación por combustibles en Santa Cruz y las ofertas especulativas inundan las redes", "url"=>"https://eldeber.com.bo/economia/crece-la-desesperacion-por-combustibles-en-santa-cruz-y-las-ofertas-especulativas-inundan-las-redes_505630/"}
+{"titular"=>"Ministro Montaño denuncia que la Asamblea Legislativa tiene bloqueados $us 1.667 millones", "url"=>"https://eldeber.com.bo/economia/ministro-montano-denuncia-que-la-asamblea-legislativa-tiene-bloqueados-us-1667-millones_505583/"}
+{"titular"=>"Cochamanidis: “El Gobierno tiene que hacer que aparezca el combustible”", "url"=>"https://eldeber.com.bo/economia/cochamanidis-el-gobierno-tiene-que-hacer-que-aparezca-el-combustible_505582/"}
+{"titular"=>"La ATT refuerza controles en terminales y aeropuertos por feriado de carnaval", "url"=>"https://eldeber.com.bo/economia/la-att-refuerza-controles-en-terminales-y-aeropuertos-por-feriado-de-carnaval_505574/"}
+{"titular"=>"Planta Siderúrgica del Mutún proyecta una utilidad neta anual de $us 80 millones", "url"=>"https://eldeber.com.bo/economia/planta-siderurgica-del-mutun-proyecta-una-utilidad-neta-anual-de-us-80-millones_505570/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Inauguración del Mutún fue para la foto  y recién producirá en dos semanas", "url"=>"https://www.eldiario.net/portal/2025/03/03/inauguracion-del-mutun-fue-para-la-foto-y-recien-producira-en-dos-semanas/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Productividad debe jugar un  rol clave para aumentar salarios", "url"=>"https://www.eldiario.net/portal/2025/03/02/productividad-debe-jugar-un-rol-clave-para-aumentar-salarios/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Los pagos vía electrónica  crecieron en 116% en 2024", "url"=>"https://www.eldiario.net/portal/2025/03/02/los-pagos-via-electronica-crecieron-en-116-en-2024/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Alientan reincorporación de Bolivia  a la cuenca del Pacífico vía aérea", "url"=>"https://www.eldiario.net/portal/2025/03/02/alientan-reincorporacion-de-bolivia-a-la-cuenca-del-pacifico-via-aerea/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Falta de combustible amenaza a la producción de alimentos", "url"=>"https://www.eldiario.net/portal/2025/03/01/falta-de-combustible-amenaza-a-la-produccion-de-alimentos/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Esperan subir en $us 400 millones  las reservas en la presente gestión", "url"=>"https://www.eldiario.net/portal/2025/03/01/esperan-subir-en-us-400-millones-las-reservas-en-la-presente-gestion/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Epcoro entregará una tonelada de oro al BCB y suspende compra a cooperativas", "url"=>"https://www.eldiario.net/portal/2025/03/01/epcoro-entregara-una-tonelada-de-oro-al-bcb-y-suspende-compra-a-cooperativas/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Impulsan una solución sostenible e  innovadora para gestión de residuos", "url"=>"https://www.eldiario.net/portal/2025/03/01/impulsan-una-solucion-sostenible-e-innovadora-para-gestion-de-residuos/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Mutún en la campaña", "url"=>"https://www.eldiario.net/portal/2025/02/28/mutun-en-la-campana/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Bolivia fuera del mapa  de las reservas de litio", "url"=>"https://www.eldiario.net/portal/2025/02/28/bolivia-fuera-del-mapa-de-las-reservas-de-litio/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Litio requiere $us 5.000 millones y abrir el desarrollo a empresas experimentadas", "url"=>"https://www.eldiario.net/portal/2025/02/28/litio-requiere-us-5-000-millones-y-abrir-el-desarrollo-a-empresas-experimentadas/"}
+{"titulo"=>"Economía", "url"=>"https://www.eldiario.net/portal/category/secciones/economia/"}
+{"titulo"=>"Gobierno construyó sede para contrabandistas", "url"=>"https://www.eldiario.net/portal/2025/02/28/gobierno-construyo-sede-para-contrabandistas/"}
+{"titulo"=>"Aduana moderniza sus operaciones para agilizar el comercio exterior", "url"=>"/actualidad/economia/20250302/aduana-moderniza-sus-operaciones-agilizar-comercio-exterior"}
+{"titulo"=>"BCB prevé incremento de alrededor de $us 400 millones en las Reservas Internacionales este año", "url"=>"/actualidad/economia/20250301/bcb-preve-incremento-alrededor-us-400-millones-reservas-internacionales"}
+{"titulo"=>"Pese a las filas por combustible, garantizan la normal provisión durante Carnaval", "url"=>"/actualidad/economia/20250228/pese-filas-combustible-garantizan-normal-provision-carnaval"}
+{"titulo"=>"Vinos bolivianos obtuvieron 73 medallas internacionales en 2024 ", "url"=>"/actualidad/economia/20250228/vinos-bolivianos-obtuvieron-73-medallas-internacionales-2024"}
+{"titulo"=>" Estiman que el Carnaval de Oruro 2025 generará un movimiento económico de Bs 400 millones ", "url"=>"/actualidad/economia/20250228/estiman-que-carnaval-oruro-2025-generara-movimiento-economico-bs-400"}
+{"titulo"=>"Garantizan normal provisión de combustibles durante el largo feriado por Carnaval ", "url"=>"/actualidad/economia/20250228/garantizan-normal-provision-combustibles-largo-feriado-carnaval"}
+{"titulo"=>"Ingresos de YPFB caen 10,6% en 2024 y la renta petrolera llega a su mínimo histórico ", "url"=>"/actualidad/economia/20250228/ingresos-ypfb-caen-106-2024-renta-petrolera-llega-su-minimo-historico"}
+{"titulo"=>"Funcionarios de la ANH y militares son atacados en Beni", "url"=>"/actualidad/economia/20250228/funcionarios-anh-militares-son-atacados-beni"}
+{"titulo"=>"Soyeros logran preacuerdo para  la liberación de las exportaciones", "url"=>"/actualidad/economia/20250228/soyeros-logran-preacuerdo-liberacion-exportaciones"}
+{"titulo"=>"ENDE y sus empresas filiales incrementaron su utilidad neta a Bs 1.237 millones en 2024", "url"=>"/actualidad/economia/20250228/ende-sus-empresas-filiales-incrementaron-su-utilidad-neta-bs-1237"}
+{"titulo"=>"Claure afirma que los principales actores globales del litio están listos para invertir en Bolivia y es ‘momento de actuar’", "url"=>"/actualidad/economia/20250227/claure-afirma-que-principales-actores-globales-del-litio-estan-listos"}
+{"titulo"=>" Nueva aerolínea doméstica pretende operar vuelos en Bolivia y tramita permiso con la DGAC ", "url"=>"/actualidad/economia/20250227/nueva-aerolinea-domestica-pretende-operar-vuelos-bolivia-tramita"}
+{"titulo"=>"Univida alcanzó Bs 62 millones en utilidades en 2024 y ocupa el primer lugar en el mercado asegurador", "url"=>"/actualidad/economia/20250227/univida-alcanzo-bs-62-millones-utilidades-2024-ocupa-primer-lugar"}
+{"titulo"=>"Contrabandistas de combustible atacaron a funcionarios de la ANH ", "url"=>"/actualidad/economia/20250227/contrabandistas-combustible-atacaron-funcionarios-anh"}
+
+
+
+
+========================INCIDENTES========================
+{"titulo"=>"Liberan a 110 detenidos  tras protesta electoral", "url"=>"https://www.eldiario.net/portal/2025/03/04/liberan-a-110-detenidos-tras-protesta-electoral/"}
+{"titulo"=>"Desabastecimiento de combustible  requiere respuestas de autoridades", "url"=>"https://www.eldiario.net/portal/2025/03/04/desabastecimiento-de-combustible-requiere-respuestas-de-autoridades/"}
+
+
+
+

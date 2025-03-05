@@ -30,12 +30,13 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     console.log('Datos recibidos:', req.body);
 
-    let sql = 'CALL pDatosMonedas(?, ?, ?, ?)';
+    let sql = 'CALL pDatosMonedas(?, ?, ?, ?, ?)';
     let valores = [
         req.body.id_fuente,
         req.body.id_moneda,
         req.body.fecha,
-        req.body.valor_respecto_dolar
+        req.body.venta,
+        req.body.compra
     ];
 
     conexion.query(sql, valores, (err, resultado) => {
