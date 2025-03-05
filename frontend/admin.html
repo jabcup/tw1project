@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            background-color: #0a0a0a;
+            color: #00ff88;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Lateral */
+        #menu {
+            width: 250px;
+            background-color: #000;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+            border-right: 2px solid #00ff88;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #00ff88;
+            padding: 8px 12px;
+            width: 80%;
+            text-align: center;
+            margin: 8px 0;
+            font-size: 16px;
+            border: 1.5px solid #00ff88;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 6px rgba(0, 255, 100, 0.7);
+            transition: all 0.4s ease;
+        }
+
+        #menu a:hover {
+            background-color: #00ff88;
+            color: #000;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 150, 1);
+        }
+
+        #menu a.active {
+            background-color: #00ff44;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 255, 100, 1);
+        }
+
+        /* Contenido Principal */
+        .main-content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            padding: 40px;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #welcome-message {
+            font-size: 2rem;
+            text-shadow: 0 0 15px #00ff88;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
+            }
+
+            to {
+                text-shadow: 0 0 20px #00ffaa, 0 0 30px #00ffaa, 0 0 40px #00ffaa;
+            }
+        }
+
+        /* Animación del menú */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        #menu {
+            animation: slideIn 0.8s ease-out;
+        }
+
+        /* Botones extra */
+        .button {
+            padding: 12px 20px;
+            background-color: #00ff88;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 100, 0.8);
+        }
+
+        .button:hover {
+            background-color: #00ffaa;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 150, 1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menú Lateral -->
+    <div id="menu">
+        <a href="GUsuarios.html" id="btnUsuarios">Usuarios</a>
+        <a href="GUbicaciones.html" id="btnUbicaciones">Ubicaciones</a>
+        <a href="GFuentes.html" id="btnFuentes">Fuentes</a>
+        <a href="GMonedas.html" id="btnFuentes">Monedas</a>
+        <a href="index.html" id="btnSistema">Sistema</a>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <div id="welcome-message">
+            Bienvenido Administrador, <span id="usuarioNombre"></span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('usuarioNombre').textContent = localStorage.getItem('usuario');
+
+        const currentPage = window.location.href.split('/').pop();
+        const menuLinks = document.querySelectorAll('#menu a');
+
+        menuLinks.forEach(link => {
+            if (link.href.includes(currentPage)) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

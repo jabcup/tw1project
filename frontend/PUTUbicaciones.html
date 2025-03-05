@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Ubicación</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            background-color: #0a0a0a;
+            color: #00ff88;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal */
+        .form-container {
+            background-color: #0a0a0a;
+            color: #00ff88;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 100, 0.6);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            background-color: #003322;
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            font-size: 16px;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00ff88;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00ffaa;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 255, 150, 0.8);
+        }
+
+        /* Enlace de retroceso */
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #00ff88;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #00ffaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Editar Ubicación</h2>
+
+        <form id="editUbicacionForm">
+            <label for="nombreUbicacion">Nombre</label>
+            <input type="text" id="nombreUbicacion" name="nombreUbicacion" required>
+
+            <button type="submit">Actualizar Ubicación</button>
+        </form>
+
+        <a href="GUbicaciones.html" class="back-link">← Volver a la gestión de ubicaciones</a>
+    </div>
+
+    <script>
+        // Función para obtener los datos de la ubicación por su ID
+        function obtenerUbicacion(id) {
+            fetch(`http://localhost:2000/Tubicaciones/${id}`)
+                .then(response => response.json())
+                .then(ubicacion => {
+                    // Pre-cargar los datos en los campos del formulario
+                    document.getElementById('nombreUbicacion').value = ubicacion.nombre_ubicacion;
+                })
+                .catch(error => console.error('Error al obtener la ubicación:', error));
+        }
+
+        // Función para actualizar los datos de la ubicación
+        function actualizarUbicacion(id, data) {
+            fetch(`http://localhost:2000/Tubicaciones/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Ubicación actualizada con éxito.');
+                    window.location.href = 'GUbicaciones.html'; // Redirigir a la gestión de ubicaciones
+                })
+                .catch(error => console.error('Error al actualizar la ubicación:', error));
+        }
+
+        // Obtener el ID de la ubicación desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const idUbicacion = params.get('id');
+
+        // Cargar los datos de la ubicación cuando se carga la página
+        window.onload = () => obtenerUbicacion(idUbicacion);
+
+        // Manejar el formulario de actualización
+        document.getElementById('editUbicacionForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const nombreUbicacion = document.getElementById('nombreUbicacion').value;
+
+            const updatedData = {
+                nombre_ubicacion: nombreUbicacion,
+            };
+
+            actualizarUbicacion(idUbicacion, updatedData);
+        });
+    </script>
+
+</body>
+
+</html>

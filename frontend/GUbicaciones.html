@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Ubicaciones</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            background-color: #0a0a0a;
+            color: #00ff88;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #menu {
+            width: 250px;
+            background-color: #000;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+            border-right: 2px solid #00ff88;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #00ff88;
+            padding: 8px 12px;
+            width: 80%;
+            text-align: center;
+            margin: 8px 0;
+            font-size: 16px;
+            border: 1.5px solid #00ff88;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 6px rgba(0, 255, 100, 0.7);
+            transition: all 0.4s ease;
+        }
+
+        #menu a:hover {
+            background-color: #00ff88;
+            color: #000;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 150, 1);
+        }
+
+        #menu a.active {
+            background-color: #00ff44;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 255, 100, 1);
+        }
+
+        .main-content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            padding: 40px;
+            background-color: #0a0a0a;
+            overflow-y: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-shadow: 0 0 15px #00ff88;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #00ff88;
+            box-shadow: 0 0 10px rgba(0, 255, 100, 0.5);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            border: 1px solid #00ff88;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003322;
+        }
+
+        tr:nth-child(even) {
+            background-color: #001a11;
+        }
+
+        /* Botón acción */
+        .button {
+            padding: 8px 12px;
+            background-color: #00ff88;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 6px rgba(0, 255, 100, 0.8);
+        }
+
+        .button:hover {
+            background-color: #00ffaa;
+            transform: scale(1.1);
+            box-shadow: 0 0 12px rgba(0, 255, 150, 1);
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="menu">
+        <a href="GUsuarios.html">Usuarios</a>
+        <a href="GUbicaciones.html">Ubicaciones</a>
+        <a href="GFuentes.html">Fuentes</a>
+        <a href="GMonedas.html">Monedas</a>
+        <a href="index.html">Sistema</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Gestión de Ubicaciones</h2>
+
+        <button class="button" onclick="window.location.href='POSTUbicaciones.html'">Agregar Ubicación</button>
+
+        <br>
+        <br>
+
+        <div class="table-container">
+            <table id="ubicacionesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre de Ubicación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las ubicaciones se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Función para cargar las ubicaciones
+        function cargarUbicaciones() {
+            fetch('http://localhost:2000/Tubicaciones')
+                .then(response => response.json())
+                .then(ubicaciones => {
+                    const tableBody = document.querySelector("#ubicacionesTable tbody");
+                    tableBody.innerHTML = "";
+
+                    ubicaciones.forEach(ubicacion => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${ubicacion.id_ubicacion}</td>
+                            <td>${ubicacion.nombre_ubicacion}</td>
+                            <td class="action-buttons">
+                                <button class="button" onclick="editarUbicacion(${ubicacion.id_ubicacion})">📄</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error al cargar ubicaciones:', error));
+        }
+
+        function editarUbicacion(id) {
+            window.location.href = `PUTUbicaciones.html?id=${id}`;
+        }
+
+        // Activar menú actual
+        const currentPage = window.location.href.split('/').pop();
+        const menuLinks = document.querySelectorAll('#menu a');
+        menuLinks.forEach(link => {
+            if (link.href.includes(currentPage)) {
+                link.classList.add('active');
+            }
+        });
+
+        window.onload = cargarUbicaciones;
+    </script>
+
+</body>
+
+</html>
