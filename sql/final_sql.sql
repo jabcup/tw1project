@@ -86,3 +86,5 @@ CALL tw1project.pfuente("SENAMHI", "Servicio nacional de meteorologia e hidrolog
 
 ALTER TABLE t_climas MODIFY COLUMN condiciones VARCHAR(50);
 
+ALTER TABLE tw1project.t_incidentes MODIFY COLUMN descripcion_incidente varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL NULL;
+ALTER TABLE tw1project.t_incidentes MODIFY COLUMN url varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL NULL;

@@ -40,12 +40,12 @@ class SenamhiScrapper
 					# puts "entrando al unless"
 			        current_option = doc.css('span#estacion span').text
 			        # puts current_option
-			        puts "ubicacion es #{self.ubicacion[:ubicacion]}"
+			        # puts "ubicacion es #{self.ubicacion[:ubicacion]}"
 			        # puts ubicacion
-					page.locator('#selectDepartamento').select_option(value: "#{self.ubicacion[:ubicacion]}")
+					page.locator('#selectDepartamento').select_option(value: "#{self.ubicacion}")
 					# puts "tarija"
 					page.wait_for_selector('span#estacion',state: 'visible', timeout: 3600000)
-					puts "selector de estacion visible"
+					# puts "selector de estacion visible"
 					page.wait_for_function("document.querySelector('span#estacion').textContent !== '#{current_option}'", timeout: 3000000)
 					# puts "comparacion"
 				end

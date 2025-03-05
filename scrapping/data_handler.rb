@@ -125,6 +125,28 @@ class News
 			response = HTTParty.post(@local_url, body: datos.to_json, headers: post_headers)
 			puts response
 		end
+
+		post_headers= { 
+			'Content-Type' => 'application/json',
+		    'Accept' => 'application/json'         
+		}
+		@incidentes.each do |noticia|
+			datos = {
+				lugar: "",
+				tipo: "incidente",
+				descripcion_incidente: noticia["titulo"],
+				fecha: Date.today,
+				hora: '00:00',
+				id_fuente: 2,
+				url: noticia["url"]
+			}
+
+
+
+
+			response = HTTParty.post(@local_url, body: datos.to_json, headers: post_headers)
+			puts response
+
 	end
 
 end
@@ -164,6 +186,7 @@ class Coin
 end
 
 class Climate
+	def initialize
 	@departamentos = [
 		'La Paz', 
 		'Santa Cruz', 
@@ -175,7 +198,6 @@ class Climate
 		'Beni', 
 		'Pando'
 	]
-	def initialize(ubicacion)
 	end
 	
 	def load_save_data
@@ -184,27 +206,28 @@ class Climate
 			scrapper.SetData(scrapper.LoadExternData("a"))
 			id = @departamentos.index(departamento) + 1
 
-					id_fuente = 5
-		id_moneda = 1
+			id_fuente = 6
 
-		post_headers= { 
-			'Content-Type' => 'application/json',
-		    'Accept' => 'application/json'         
-		}
+			post_headers= { 
+				'Content-Type' => 'application/json',
+			    'Accept' => 'application/json'         
+			}
 
-		data = self.load_data
-		datos = {
-			id_fuente: id_fuente,
-			id_moneda: id_moneda,
-			fecha: Date.today,
-			venta: data[:venta].gsub(',', '.').to_f,
-			compra: data[:compra].gsub(',', '.').to_f
-		}
-		@local_url='http://localhost:2000/Tdatosmonedas'
-		puts @local_url
+			datos = {
+				fecha: Date.today,
+				id_ubicacion: id,
+				t_max: scrapper.tmax,
+				t_min: scrapper.tmin,
+				condiciones: scrapper.condiciones,
+				precipitacion: scrapper.precipitacion,
+				humedad: scrapper.humedad,
+				id_fuente: id_fuente
+			}
+			@local_url='http://localhost:2000/Tclimas'
+			puts @local_url
 
-		response = HTTParty.post(@local_url, body: datos.to_json, headers: post_headers)
-		puts response
+			response = HTTParty.post(@local_url, body: datos.to_json, headers: post_headers)
+			puts response
 			
 		end
 	end
@@ -213,5 +236,5 @@ end
 
 noti = News.new
 coin = Coin.new
-climate = Climate.new("La Paz")
+climate = Climate.new
 
