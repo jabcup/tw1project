@@ -4,7 +4,7 @@ require "json"
 
 require_relative "news/deber_scrapper"
 require_relative "news/tiempos_scrapper"
-# require_relative "news/diario_scrapper"
+require_relative "news/diario_scrapper"
 require_relative "coin/coin_scrapper"
 
 =begin
@@ -37,7 +37,7 @@ class News
 		temp = scrapper.get_deportes
 		self.placing(temp, @sports_news)
 
-=begin		#importando desde el diario
+		#importando desde el diario
 		scrapper = DiarioScrapper.new
 
 		temp = scrapper.get_incidentes
@@ -57,7 +57,7 @@ class News
 
 		temp = scrapper.get_seguridad
 		self.placing(temp, @security_news)
-=end
+
 		#desde los tiempos
 		scrapper = TiemposScrapper.new
 
@@ -146,6 +146,7 @@ class News
 
 			response = HTTParty.post(@local_url, body: datos.to_json, headers: post_headers)
 			puts response
+		end
 
 	end
 
@@ -235,6 +236,10 @@ class Climate
 end
 
 noti = News.new
+noti.load_data
+noti.save_data
 coin = Coin.new
+coin.load_data
+coin.save_data
 climate = Climate.new
-
+climate.load_save_data

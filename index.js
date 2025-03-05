@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 2000;
+const { exec } = require('child_process');
+const schedule = require('node-schedule');
 
 app.use(express.json());
 
@@ -56,6 +58,24 @@ app.use('/Tubicaciones', ubicaciones);
 const usuarios = require('./src/Tusuarios');
 app.use('/Tusuarios', usuarios);
 
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
+
+
+schedule.scheduleJob('0 8 * * *', () => {
+    console.log('Ejecutando script Ruby...');
+    exec('ruby ruta/al/script.rb', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error al ejecutar el script: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`Error en la ejecución: ${stderr}`);
+            return;
+        }
+        console.log(`Salida del script: ${stdout}`);
+    });
+});
+
 });
