@@ -142,7 +142,7 @@ class News
 			}
 
 
-
+			
 
 			response = HTTParty.post(@local_url, body: datos.to_json, headers: post_headers)
 			puts response
